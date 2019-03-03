@@ -22,4 +22,7 @@ class Node(object):
         
         y=((self.long-other.long)*longdist)
         return pow((x**2)-(y**2),0.5)
+        
+        '''The final distanceis calculated using the 
+        distance formula in coordinate geometry.'''
     
