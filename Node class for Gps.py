@@ -1,11 +1,11 @@
 class Node(object):
-    def __init__(self,lat,long,cnodes):
+    def __init__(self,lat,longi,cnodes):
         self.lat=lat
-        self.long=long
+        self.longi=longi
         self.cnodes=cnodes.copy()
     
     def __str__(self):
-        return(str(self.lat)+" + "+str(self.long)+"+"+self.cnodes)
+        return(str(self.lat)+" + "+str(self.longi)+"+"+self.cnodes)
         
     def dist(self,other):
         x=((self.lat-other.lat)*111000)
@@ -20,7 +20,7 @@ class Node(object):
         when tha latitudes of initial and final position 
         are not very far apart.'''
         
-        y=((self.long-other.long)*longdist)
+        y=((self.longi-other.longi)*longdist)
         return pow((x**2)-(y**2),0.5)
         
         '''The final distanceis calculated using the 
